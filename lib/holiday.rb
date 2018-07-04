@@ -78,6 +78,8 @@ def all_supplies_in_holidays(holiday_hash)
       holiday.each { |name, supplies| 
         puts "#{name}: #{supplies.join(",")}"
   }
+    
+  }
 end
 
 def all_holidays_with_bbq(holiday_hash)
