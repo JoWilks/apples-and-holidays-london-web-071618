@@ -82,9 +82,9 @@ def all_supplies_in_holidays(holiday_hash)
             mod_name = name.to_s.split('_')
             mod_name2 = []
               mod_name.each {|word| mod_name2 << word.capitalize }
-            puts "  #{mod_name2.join(" ")}, #{supplies.join(", ")}"
+            "  #{mod_name2.join(" ")}, #{supplies.join(", ")}"
           else
-            puts "  #{name.capitalize}: #{supplies.join(", ")}"
+            "  #{name.capitalize}: #{supplies.join(", ")}"
           end
     }
   }
