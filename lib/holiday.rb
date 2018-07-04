@@ -77,12 +77,14 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each { |season, holiday| 
     puts "#{season.capitalize}:"
       holiday.each { |name, supplies| 
+        
           if name.to_s.include? "_"
-            mod_name = name.split('_')
-              mod_name.collect {|word| word.capitalize}
-            puts "  #{mod_name}, #{supplies.join(", ")}"
+            mod_name = name.to_s.split('_')
+            mod_name2 = []
+              mod_name.each {|word| mod_name2 << word.capitalize }
+            puts "  #{mod_name2.join(" ")}, #{supplies.join(", ")}"
           else
-            puts "  #{name}: #{supplies.join(", ")}"
+            puts "  #{name.capitalize}: #{supplies.join(", ")}"
           end
     }
   }
